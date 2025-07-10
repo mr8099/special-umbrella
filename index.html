@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shahid Rafiq | Synth Web Developer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-container">
+      <h1>Shahid Rafiq</h1>
+      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <h2 class="hero-title">SYNTH WEB DEVELOPER</h2>
+      <p class="hero-subtitle">Crafting immersive web experiences</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm Shahid Rafiq, a website creator passionate about synth-driven design, development, and
+        user experience. I build engaging, responsive, and visually appealing websites
+        that bring ideas to life.
+      </p>
+      <img src="https://source.unsplash.com/collection/190727/800x400" alt="About graphic" class="about-img"/>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://source.unsplash.com/collection/142786/400x200" alt="Project 1"/>
+          <h3>Interactive Synth Shop</h3>
+          <p>Built a dynamic e-commerce front-end with custom animations and mobile optimization.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://source.unsplash.com/collection/1127163/400x200" alt="Project 2"/>
+          <h3>Dark Mode Dashboard</h3>
+          <p>Designed a real-time admin dashboard with dark/light theme toggle and smooth transitions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xqkrzngj" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="_replyto" placeholder="Your Email" required/>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p class="email-link">or email me at <a href="mailto:shahidrafiq809@gmail.com">shahidrafiq809@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shahid Rafiq. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+    toggle.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      htmlEl.setAttribute('data-theme', next);
+      toggle.textContent = next === 'light' ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
